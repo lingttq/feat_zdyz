@@ -1,0 +1,16 @@
+# Architecture
+BR2_arm=y
+BR2_cortex_a7=y
+
+# System configuration
+BR2_BOARD_ROOT_DIR="board/stmicroelectronics/stm32mp157d-zdyz"
+BR2_ROOTFS_OVERLAY="${BR2_BOARD_ROOT_DIR}/overlay/"
+BR2_ROOTFS_POST_IMAGE_SCRIPT="${BR2_BOARD_ROOT_DIR}/tools/scripts/image-post.sh"
+
+# Filesystem
+BR2_TARGET_ROOTFS_EXT2=y
+BR2_TARGET_ROOTFS_EXT2_4=y
+BR2_TARGET_ROOTFS_EXT2_SIZE="128M"
+
+# Additional tools
+BR2_PACKAGE_HOST_GENIMAGE=y
